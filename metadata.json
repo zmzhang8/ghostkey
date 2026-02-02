@@ -1,0 +1,10 @@
+{
+  "name": "Ghost Key",
+  "description": "Silences system hotkeys with backup and restore functionality.",
+  "uuid": "ghostkey@zhaoming.win",
+  "shell-version": [
+    "48"
+  ],
+  "settings-schema": "org.gnome.shell.extensions.ghostkey",
+  "url": "https://github.com/zmzhang8/ghostkey"
+}
