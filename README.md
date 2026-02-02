@@ -16,7 +16,11 @@ A GNOME Shell extension that temporarily silences system hotkeys, perfect for ga
 3. **Input Source Switch** - Keyboard layout switching shortcuts
 4. **Application View** - Toggle application overview
 5. **App Shortcuts (1-9)** - Number keys that switch between applications
-6. **Dash Hotkeys** - Dash-to-dock hotkeys (if extension is installed)
+6. **Dash-to-dock Hotkeys** - Dash-to-dock hotkeys (if extension is installed)
+
+## Screenshot
+
+![ghostkey](ghostkey.png)
 
 ## Installation
 
