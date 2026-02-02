@@ -257,7 +257,7 @@ class GhostKeyToggle extends QuickMenuToggle {
     _init(extension) {
         super._init({
             title: _('Ghost Key'),
-            iconName: 'keyboard-hide-symbolic',
+            iconName: 'input-keyboard-symbolic',
             toggleMode: true,
         });
 
@@ -296,7 +296,7 @@ class GhostKeyToggle extends QuickMenuToggle {
 
     _buildMenu() {
         // Set menu header
-        this.menu.setHeader('keyboard-hide-symbolic', _('Ghost Key'),
+        this.menu.setHeader('input-keyboard-symbolic', _('Ghost Key'),
             _('Select keys to silence'));
 
         // Super key toggle - prevent menu from closing
@@ -418,7 +418,7 @@ class GhostKeyIndicator extends SystemIndicator {
 
         // Add indicator icon
         this._indicator = this._addIndicator();
-        this._indicator.iconName = 'keyboard-hide-symbolic';
+        this._indicator.iconName = 'input-keyboard-symbolic';
 
         // Create toggle
         this._toggle = new GhostKeyToggle(extension);
@@ -440,7 +440,7 @@ class GhostKeyIndicator extends SystemIndicator {
 export default class GhostKeyExtension extends Extension {
     enable() {
         this._settings = this.getSettings();
-        
+
         // Check if ghost mode was previously active but keys were not restored
         // This can happen if gnome-shell crashed, extension was disabled unexpectedly, or system rebooted
         const wasEnabled = this._settings.get_boolean('ghost-mode-enabled');
@@ -454,7 +454,7 @@ export default class GhostKeyExtension extends Extension {
             this._settings.set_boolean('ghost-mode-enabled', false);
             log('GhostKey: Keys restored from previous session');
         }
-        
+
         this._indicator = new GhostKeyIndicator(this);
         Main.panel.statusArea.quickSettings.addExternalIndicator(this._indicator);
     }
@@ -469,7 +469,7 @@ export default class GhostKeyExtension extends Extension {
             manager.destroy();
             this._settings.set_boolean('ghost-mode-enabled', false);
         }
-        
+
         this._indicator.destroy();
         this._indicator = null;
         this._settings = null;
