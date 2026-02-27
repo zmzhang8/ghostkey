@@ -1,90 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
   <schema id="org.gnome.shell.extensions.ghostkey" path="/org/gnome/shell/extensions/ghostkey/">
-    
+
     <key name="ghost-mode-enabled" type="b">
       <default>false</default>
       <summary>Ghost mode enabled</summary>
-      <description>Whether the ghost mode (key silencing) is currently active</description>
+      <description>Whether the ghost mode (key disabling) is currently active</description>
     </key>
-    
-    <key name="silence-super-key" type="b">
+
+    <key name="disable-overlay-key" type="b">
       <default>true</default>
-      <summary>Silence Super key</summary>
-      <description>Silence the Super key (overlay key)</description>
+      <summary>Disable overlay key</summary>
+      <description>Disable the overlay key</description>
     </key>
-    
-    <key name="silence-window-menu" type="b">
+
+    <key name="disable-window-menu-shortcut" type="b">
       <default>true</default>
-      <summary>Silence window menu</summary>
-      <description>Silence the activate-window-menu keybinding</description>
+      <summary>Disable window menu</summary>
+      <description>Disable the activate-window-menu shortcut</description>
     </key>
-    
-    <key name="silence-input-source" type="b">
+
+    <key name="disable-input-source-shortcut" type="b">
       <default>true</default>
-      <summary>Silence input source switch</summary>
-      <description>Silence the switch-input-source keybinding</description>
+      <summary>Disable input source switch</summary>
+      <description>Disable the switch-input-source shortcut</description>
     </key>
-    
-    <key name="silence-app-view" type="b">
+
+    <key name="disable-app-view-shortcut" type="b">
       <default>true</default>
-      <summary>Silence application view</summary>
-      <description>Silence the toggle-application-view keybinding</description>
+      <summary>Disable application view</summary>
+      <description>Disable the toggle-application-view shortcut</description>
     </key>
-    
-    <key name="silence-app-shortcuts" type="b">
+
+    <key name="disable-app-shortcuts" type="b">
       <default>true</default>
-      <summary>Silence application shortcuts</summary>
-      <description>Silence the open-new-window-application and switch-to-application keybindings (1-9)</description>
+      <summary>Disable application shortcuts</summary>
+      <description>Disable the open-new-window-application and switch-to-application shortcuts (1-9)</description>
     </key>
-    
-    <key name="silence-dash-hotkeys" type="b">
+
+    <key name="disable-dash-hotkeys" type="b">
       <default>true</default>
-      <summary>Silence dash hotkeys</summary>
-      <description>Silence the dash-to-dock hot-keys setting</description>
+      <summary>Disable dash hotkeys</summary>
+      <description>Disable the dash-to-dock hot-keys setting</description>
     </key>
-    
+
     <key name="original-keybindings-backup" type="s">
       <default>''</default>
       <summary>Original keybindings backup</summary>
-      <description>JSON string storing the original keybinding values before silencing</description>
+      <description>JSON string storing the original keybinding values</description>
     </key>
-    
+
     <key name="original-overlay-key" type="s">
       <default>''</default>
       <summary>Original overlay key value</summary>
       <description>Backup of the original org.gnome.mutter overlay-key value</description>
     </key>
-    
+
     <key name="original-window-menu" type="s">
       <default>''</default>
       <summary>Original window menu keybinding</summary>
       <description>Backup of the original activate-window-menu keybinding</description>
     </key>
-    
+
     <key name="original-input-source" type="s">
       <default>''</default>
       <summary>Original input source keybinding</summary>
       <description>Backup of the original switch-input-source keybinding</description>
     </key>
-    
+
     <key name="original-app-view" type="s">
       <default>''</default>
       <summary>Original app view keybinding</summary>
       <description>Backup of the original toggle-application-view keybinding</description>
     </key>
-    
+
     <key name="original-app-shortcuts" type="s">
       <default>''</default>
       <summary>Original app shortcuts</summary>
       <description>JSON object storing original values for application shortcuts (1-9)</description>
     </key>
-    
+
     <key name="original-dash-hotkeys" type="b">
       <default>false</default>
       <summary>Original dash hotkeys state</summary>
       <description>Backup of the original dash-to-dock hot-keys boolean value</description>
     </key>
-    
+
   </schema>
 </schemalist>
