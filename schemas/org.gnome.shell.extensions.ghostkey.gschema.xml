@@ -38,11 +38,6 @@
       <description>Disable the open-new-window-application and switch-to-application shortcuts (1-9)</description>
     </key>
 
-    <key name="disable-dash-hotkeys" type="b">
-      <default>true</default>
-      <summary>Disable dash hotkeys</summary>
-      <description>Disable the dash-to-dock hot-keys setting</description>
-    </key>
 
     <key name="original-keybindings-backup" type="s">
       <default>''</default>
@@ -80,11 +75,6 @@
       <description>JSON object storing original values for application shortcuts (1-9)</description>
     </key>
 
-    <key name="original-dash-hotkeys" type="b">
-      <default>false</default>
-      <summary>Original dash hotkeys state</summary>
-      <description>Backup of the original dash-to-dock hot-keys boolean value</description>
-    </key>
 
   </schema>
 </schemalist>

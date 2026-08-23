@@ -16,7 +16,6 @@ A GNOME Shell extension that temporarily silences system hotkeys, perfect for ga
 3. **Input Source Switch** - Keyboard layout switching shortcuts
 4. **Application View** - Toggle application overview
 5. **App Shortcuts (1-9)** - Number keys that switch between applications
-6. **Dash-to-dock Hotkeys** - Dash-to-dock hotkeys (if extension is installed)
 
 ## Screenshot
 
@@ -34,7 +33,7 @@ A GNOME Shell extension that temporarily silences system hotkeys, perfect for ga
 2. Compile the settings schema:
    ```bash
    cd ~/.local/share/gnome-shell/extensions/ghostkey@zhaoming.win
-   glib-compile-schemas schemas/
+   glib-compile-schemas --strict schemas/
    ```
 3. Restart GNOME Shell (X11: Alt+F2, type `r`, press Enter; Wayland: log out and back in)
 
@@ -65,7 +64,6 @@ _(Coming soon)_
 ## Requirements
 
 - GNOME Shell 48 or later
-- dash-to-dock extension (optional, for dash hotkeys support)
 
 ## Development
 
@@ -73,11 +71,18 @@ _(Coming soon)_
 
 ```
 ghostkey@zhaoming.win/
-├── extension.js          # Main extension code
+├── constants.js          # Schema definitions, keybinding descriptors, logger
+├── keyManager.js         # Schema resolution, backup, silencing, restore, crash recovery
+├── indicator.js          # QuickSettings indicator, toggle button, and submenu
+├── extension.js          # Extension entry point & lifecycle management
 ├── metadata.json         # Extension metadata
 ├── stylesheet.css        # Custom styles (if needed)
 ├── schemas/
 │   ├── org.gnome.shell.extensions.ghostkey.gschema.xml  # Settings schema
+│   └── gschemas.compiled                                # Compiled schema binary
+├── test/
+│   ├── mockSettings.js   # Pure JS GSettings mock for testing
+│   └── test_manager.js   # Automated unit test suite (run with gjs)
 └── README.md            # This file
 ```
 
@@ -93,5 +98,4 @@ journalctl -f -o cat /usr/bin/gnome-shell | grep GhostKey
 Pull requests are welcome! Please ensure:
 - Code follows GNOME Shell extension conventions
 - Error handling is added for all gsettings operations
-- The extension works both with and without dash-to-dock
 
