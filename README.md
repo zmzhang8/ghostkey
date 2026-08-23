@@ -27,7 +27,7 @@ A GNOME Shell extension that temporarily silences system hotkeys, perfect for ga
 
 1. Clone or download this repository to your GNOME extensions directory:
    ```bash
-   git clone https://github.com/zmzhang8/ghostkey.git ~/.local/share/gnome-shell/extensions/ghostkey@zhaoming.win
+   git clone git@github.com:zmzhang8/ghostkey.git ~/.local/share/gnome-shell/extensions/ghostkey@zhaoming.win
    ```
 
 2. Compile the settings schema:
