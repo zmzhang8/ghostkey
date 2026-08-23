@@ -80,9 +80,6 @@ ghostkey@zhaoming.win/
 ├── schemas/
 │   ├── org.gnome.shell.extensions.ghostkey.gschema.xml  # Settings schema
 │   └── gschemas.compiled                                # Compiled schema binary
-├── test/
-│   ├── mockSettings.js   # Pure JS GSettings mock for testing
-│   └── test_manager.js   # Automated unit test suite (run with gjs)
 └── README.md            # This file
 ```
 
